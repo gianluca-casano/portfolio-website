@@ -22,7 +22,7 @@ window.addEventListener('scroll', function(e) {
 
 
 /* --------------------------------------------------------------
-  Scroll to (CHI SIAMO - CONTATTAMI)
+  Scroll to (CHI SONO - CONTATTAMI)
 ----------------------------------------------------------------- */
 let links = document.querySelectorAll(".header__menu li a");
 
