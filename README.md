@@ -48,8 +48,8 @@ Basandosi sull'organizzazione modulare dello starter theme, la repository ospita
 
 Se sei un recruiter, un lead developer o un'azienda interessata al mio profilo professionale, puoi trovarmi e contattarmi qui:
 
-* **LinkedIn:** [Il Tuo Nome e Cognome](https://www.linkedin.com/in/gianlucacasano/)
-* **GitHub:** [Il mio profilo pubblico](https://github.com/gianluca-casano)
+* **[Linkedin](https://www.linkedin.com/in/gianlucacasano/)**
+* **[GitHub](https://github.com/gianluca-casano)**
 
 ---
 
