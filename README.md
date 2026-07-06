@@ -8,7 +8,7 @@ Il sito è strutturato con un'architettura **One-Page**, ottimizzata per offrire
 
 ## Stack Tecnologico & Strumenti
 
-Per lo sviluppo di questo progetto ho scelto di non utilizzare page builder (come Elementor o Divi), preferendo un approccio di sviluppo custom basato sulle API nativie di WordPress per garantire stabilità, pulizia del codice e performance di caricamento eccellenti.
+Per lo sviluppo di questo progetto ho scelto di non utilizzare page builder (come Elementor), preferendo un approccio di sviluppo custom basato sulle API native di WordPress per garantire stabilità, pulizia del codice e performance di caricamento eccellenti.
 
 * **UI/UX Design & Prototipazione:** Figma
 * **Core CMS & Backend:** WordPress / PHP (Custom Theme basato sullo starter theme *NextFrame* di Andrea Marchetti)
