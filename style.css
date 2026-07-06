@@ -1,0 +1,437 @@
+/*
+Theme Name: Portfolio
+Theme URI: https://gianlucacasano.it
+Author: Gianluca Casano
+Author URI: www.linkedin.com/in/gianlucacasano
+Description: Tema WordPress custom e altamente ottimizzato, sviluppato per il mio sito web portfolio personale. Basato sullo starter theme NextFrame di Andrea Marchetti.
+Version: 1.0
+Requires at least: 5.0
+Tested up to: 5.4
+Requires PHP: 7.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: gianluca-casano-portfolio
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+*/
+
+
+/* ==========================================================================
+  GOOGLE FONTS (LOCALI) - FIGTREE
+============================================================================= */
+
+/* figtree-400 - latin */
+@font-face {
+  font-display: swap;
+  font-family: 'Figtree';
+  font-style: normal;
+  font-weight: 400;
+  src: url('fonts/figtree-v9-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* figtree-500 - latin */
+@font-face {
+  font-display: swap;
+  font-family: 'Figtree';
+  font-style: normal;
+  font-weight: 500;
+  src: url('fonts/figtree-v9-latin-500.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* figtree-600 - latin */
+@font-face {
+  font-display: swap;
+  font-family: 'Figtree';
+  font-style: normal;
+  font-weight: 600;
+  src: url('fonts/figtree-v9-latin-600.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* figtree-700 - latin */
+@font-face {
+  font-display: swap;
+  font-family: 'Figtree';
+  font-style: normal;
+  font-weight: 700;
+  src: url('fonts/figtree-v9-latin-700.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* figtree-800 - latin */
+@font-face {
+  font-display: swap;
+  font-family: 'Figtree';
+  font-style: normal;
+  font-weight: 800;
+  src: url('fonts/figtree-v9-latin-800.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+
+/* ! Reset */
+body, html{ font-size: 16px; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Helvetica Neue", Arial, sans-serif; box-sizing: border-box;margin: 0;padding: 0;}
+*,*:before,*:after{ box-sizing: border-box; }
+h1,h2,h3,h4,h5,h6, p, ol, ul{margin: 0;padding: 0;}
+ol,ul{list-style-position: inside;}
+img{height: auto;}
+a{text-decoration: none;}
+hr{border:none; border-bottom: 1px solid #ddd}
+
+:root{
+  --body-bg: #EDE7D9;
+
+  --menu-bg: #EDE7D9;
+  --menu-text: #4B4237;
+
+  --text-color: #4B4237;
+
+  --border-color: #736B60;
+  --border-color-v2: #4B4237;
+  
+  --bg-color: #4B4237;
+  --bg-evi: #FFFFFF;
+
+  --cta-bg-color: #D5A021;
+  --cta-text-color: #FFFFFF;
+}
+
+/* animazione scroll + px per corretto posizionamento sezione */
+html {scroll-behavior: smooth; scroll-padding-top: 120px;}
+
+body{background: var(--body-bg)}
+
+a{text-decoration: none; color: var(--cta-text-color);}
+p{line-height: 1.3;}
+
+.home-spacer{height: 120px;}
+.portfolio-spacer{height: 95px;}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+ .spacer--tab{height: 110px;}
+}
+
+@media (max-width: 768px) {
+ .spacer--sma{height: 90px;}
+}
+
+
+/* ! Title System */
+.text-0{font-size: 5rem; line-height: 1;}
+h1, .text-1{font-size: 3.4rem;}
+h2, .text-2{font-size: 2.2rem;}
+h3, .text-3{font-size: 1.5rem;}
+h4, p, .text-4{font-size: 1rem;}
+
+h1, h2, h3, h4{margin-bottom: 1rem; color: var(--text-color);}
+
+ol, ul{font-family: 'Figtree', sans-serif; color: var(--text-color);}
+
+h1, h2, h3, h4, p, a{font-family: 'Figtree', sans-serif;}
+
+@media (max-width: 768px) {
+  .text-0{font-size: 4rem;}
+}
+
+/* ! Button system */
+.button,
+.wp-block-button__link{font-size: 1rem; text-transform: uppercase; font-weight: bold; background: #333; color:#fff; padding: 14px 25px; display: inline-block; border-radius: 4px}
+.button:hover,
+.wp-block-button__link:hover{background: #000;}
+
+
+/* ! Layout */
+/* ----------------------------------------------------------------------------------- */
+
+
+
+
+/* ! Header */
+/*----------------------------------------------------------------------------------- */
+.header-container{background: var(--menu-bg); position: fixed; width: 100%; top: 0; left: 0; z-index: 9999;}
+
+.logged-in .header-container{top: 32px;}  /* classe applicata solo quando si è loggati al sito tramite WordPress - classe "logged-in" è presente automaticamente nel body HTML */
+
+.header {display: flex; justify-content: space-between; width: 100%; max-width: 1350px; margin: 0 auto; padding: 1%; position: relative;}
+
+/* Linea marrone - non è bordo */
+.header::after{content: ' '; position: absolute; bottom: 0; left: 50%; transform: translateX(-50%); width: 96.5%; height: 2px; background-color: #4B4237;}
+
+.header a {color: var(--menu-text); display: block; padding: 20px;}
+
+.header a.header__logo {font-weight: bold; padding: 0;}
+.header__logo img {height: 40px; margin: 10px;}
+.header__menu {margin-bottom: 0; display: flex; align-items: center; justify-content: center;}
+.header__menu li {display: inline-block; position: relative;}
+.header__menu li a{position: relative; font-weight: 500;}
+.header__menu li a:hover{text-shadow: 0 0 0.5px currentColor;}
+
+/* Voce CONTATTAMI */
+.header__menu .nav-cta-contattami a{color: #D5A021; font-weight: 800; padding-right: 15px; transition: all 0.3s cubic-bezier(.215, .61, .355, 1);}
+
+@media (min-width: 1024px) {
+  .header__menu .nav-cta-contattami a:hover{transform: scale(1.1);}
+}
+
+
+.header__hamburger {display: none;}
+
+
+@media (max-width: 768px) {
+  .header-container{z-index: 99999;}
+  .header__menu {position: absolute; top: 70px; left: 0; width: 100%; background: var(--menu-bg); height: 100vh; transform: translateX(100%); overflow: hidden; transition: all 1s cubic-bezier(.215, .61, .355, 1); display: block; z-index: 0;}
+  .header__menu li {display: block; margin-top: 25px;}
+
+  .header__hamburger {display: block; width: 40px; height: 35px; margin-top: 10px; margin-right: 6px;}
+  .header__hamburger span {width: 33px; height: 4px; background: var(--menu-text); margin-top: 8px; display: block; border-radius: 5px; transition: all 0.15s cubic-bezier(.215, .61, .355, 1);}
+  .header__hamburger span:nth-child(2){width: 20px;}
+
+  /* Linee hamburger selezionate singolarmente, ruotate e traslate in asse verticale (altezza) */
+  .menu-open .header__hamburger span:nth-child(1) {transform: translateY(8px) rotate(45deg); margin-top: 12px;}
+  .menu-open .header__hamburger span:nth-child(2){display: none;}
+  .menu-open .header__hamburger span:nth-child(3) {transform: translateY(-8px) rotate(-45deg); margin-top: 12px;}
+
+  .menu-open .header__menu {transform: translateX(0%);}
+  .menu-open {overflow: hidden;}   /* contenuto fuori body è hidden (contenuto interno al body è il menu) */
+}
+
+
+/* -------------------------------------------------------------------------------------------------------------------------------- 
+  HEADER - ARCHIVIO PORTFOLIO + HEADER - PAGINA SINGOLA PROGETTO + HEADER - PRIVACY & COOKIE POLICY
+----------------------------------------------------------------------------------------------------------------------------------- */
+.header__menu--portfolio li:last-child,
+.header__menu--single-project li:last-child,
+.header__menu--legal li:last-child{font-weight: 800; padding: 20px;}
+
+@media (min-width: 1024px) {
+  .header__menu--portfolio li:last-child a:hover{transform: none; text-shadow: none;}
+
+  /*Link della voce TORNA ALLA HOME*/
+  .header__menu--portfolio .back-to,
+  .header__menu--single-project .back-to,
+  .header__menu--legal .back-to{position: relative;}
+
+  /* Linea animata sotto */
+  .header__menu--portfolio .back-to::after,
+  .header__menu--single-project .back-to::after,
+  .header__menu--legal .back-to::after{
+    content: ' ';
+    position: absolute;
+    left: 50%;
+    bottom: 14px;
+    width: 80%;
+    height: 2px;
+    transform: translateX(-50%) scale(0);
+    transform-origin: center;
+    transition: all 0.3s cubic-bezier(.215, .61, .355, 1);
+    background: var(--bg-color);
+    border-radius: 5px;
+  }
+
+  .header__menu--portfolio .back-to:hover::after,
+  .header__menu--single-project .back-to:hover::after,
+  .header__menu--legal .back-to:hover::after{transform: translateX(-50%) scale(1);}
+}
+
+/* ! Index */
+/*----------------------------------------------------------------------------------- */
+
+
+/* ! Single */
+/*----------------------------------------------------------------------------------- */
+
+
+/* ! Footer */
+/*----------------------------------------------------------------------------------- */
+.footer{background: var(--bg-color);}
+
+.footer__logo img{width: 60px;}
+
+.footer .grid .col-33:nth-child(2) p a{font-weight: 500;}
+.footer .grid .col-33:nth-child(2) p a:hover,
+.footer .grid .col-33:nth-child(3) p a:hover,
+.footer .grid .col-33:nth-child(3) p a img:hover,
+.footer .grid .col-50 a:hover{opacity: 0.8;}
+
+.footer .grid .col-33:nth-child(2) p:last-child a{font-weight: 700;}
+
+.social-icon{width: 40px; height: 40px;}
+
+@media (max-width: 1024px) {
+  .footer .col-50, .col-100{text-align: center;}
+}
+
+
+/* -------------------------------------------------------------------------------------------------------------------------------- 
+  Arrow up
+----------------------------------------------------------------------------------------------------------------------------------- */
+.container-arrow-up{
+  border: 2px solid #EDE7D9;
+  position: fixed;
+  bottom: 50px;
+  right: 25px;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--bg-color);
+  border-radius: 100px;
+  opacity: 0;
+  cursor: pointer;
+  visibility: hidden;
+  transition: all 0.5s cubic-bezier(.215, .61, .355, 1), visibility 0.5s;
+  transform: translateY(5px);
+}
+
+@media (max-width: 768px) {
+  .container-arrow-up{right: 15px;}  
+}
+
+.arrow-up{width: 25px; height: 25px; display: block;}
+
+.scroll-down .container-arrow-up{
+  opacity: 1;
+  transition: all 0.5s cubic-bezier(.215, .61, .355, 1), visibility 0s;
+  transform: translateY(-5px);
+  visibility: visible;
+}
+
+
+/* ! Grid System */
+/*----------------------------------------------------------------------------------- */
+
+.grid{display: flex; flex-wrap: wrap; max-width: 1350px; margin: 0 auto}
+.grid--medium{max-width: 1220px;}
+.grid--small{max-width: 900px}
+.grid--center{justify-content: center;}
+.grid--full{max-width: 100%;}
+
+.col-20{width:20%}
+.col-25{width:25%}
+.col-30{width:30%}
+.col-33{width:33.33%}
+.col-40{width:40%}
+.col-50{width:50%}
+.col-60{width:60%}
+.col-70{width:70%}
+.col-80{width:80%}
+.col-90{width:90%}
+.col-100{width:100%}
+
+/* col custom */
+.col-96{width: 96.5%;}
+
+[class*='col-']{padding: 0;}
+
+.grid--full [class*='col-']
+/* .grid .grid [class*='col-'] */ {padding: 0;} /* mettere la , se riattivato */
+
+@media (max-width: 1024px) {
+  [class*='col-']{width: 100%}
+  .sma-33{width: 33.33%}
+  .sma-50{width: 50%}
+  .sma-25{width: 25%}
+}
+
+/* ! Helpers */
+/*----------------------------------------------------------------------------------- */
+
+.br{border: 1px solid red;}
+.img-res{width: 100%;}
+
+.mt-0{margin-top: 0;}
+.mt-1{margin-top: 1rem;}
+.mt-2{margin-top: 2rem;}
+.mt-3{margin-top: 3rem;}
+.mt-4{margin-top: 4rem;}
+
+.mb-0{margin-bottom: 0;}
+.mb-1{margin-bottom: 1rem;}
+.mb-2{margin-bottom: 2rem;}
+.mb-3{margin-bottom: 3rem;}
+.mb-4{margin-bottom: 4rem;}
+.mb-10{margin-bottom: 10rem;}
+
+.text-center{text-align: center}
+.text-left{text-align: left}
+.text-right{text-align: right}
+
+.p-0{padding: 0;}
+.p-1{padding: 1rem;}
+.p-2{padding: 2rem;}
+.p-3{padding: 3rem;}
+.p-4{padding: 4rem;}
+
+.pt-0{padding-top: 0;}
+.pt-1{padding-top: 1rem;}
+.pt-2{padding-top: 2rem;}
+.pt-3{padding-top: 3rem;}
+.pt-4{padding-top: 4rem;}
+
+.pb-0{padding-bottom: 0;}
+.pb-1{padding-bottom: 1rem;}
+.pb-2{padding-bottom: 2rem;}
+.pb-3{padding-bottom: 3rem;}
+.pb-4{padding-bottom: 4rem;}
+
+.w-90-center{width: 90%; margin: 0 auto 10rem;}
+
+.icon-small{width: 40px;padding: 8px;}
+.icon-white{filter: invert(1);}
+
+.bg-dark{background: #000;}
+
+.text-white{color:#fff}
+.text-black{color: #000; opacity: 0.9;}
+.text-gray{color: #000; opacity: 0.7;}
+.text-brown{color:#4B4237}
+.text-beige{color: #EDE7D9;}
+.text-gold{color: #D5A021;}
+
+.v-center{display: flex; justify-content: center; flex-flow: column; align-items: flex-start;}
+.o-center{display: flex; justify-content: center;}
+
+.font-normal{font-weight: 400;}
+.font-medium{font-weight: 500;}
+.font-bold{font-weight: 700;}
+.font-extrabold{font-weight: 800;}
+
+.none{display: none;}
+.overflow{overflow: hidden;}
+
+@media (max-width: 768px) {
+  .sma-none{display: none;}
+}
+
+@media (min-width: 768px) {
+  .header__menu .desktop-none{display: none;}
+}
+
+
+/* Icone numeri della HOME */
+
+.number-icon-container{
+  width: 45px;
+  height: 45px;
+  border: 2px solid #4B4237;
+  border-radius: 45px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.number-icon{
+  width: 35px;
+  height: 35px;
+  background: #4B4237;
+  color: #fff;
+  line-height: 35px;
+  border-radius: 35px;
+}
+
+
+/* Icone per elenco */
+.list-mark li{position: relative; list-style-type: none; padding-left: 30px; margin-bottom: 15px; font-size: 1.2rem;}
+.list-mark li::after{content: " "; position: absolute; left: -5px; top: 1px; width: 25px; height: 25px; background: url('icons/arrow-right-small.svg'); background-size: 100%;}
+
+
+/* ! Wordpress Styles */
+/*----------------------------------------------------------------------------------- */
+
+/* allineamenti full e wide personalizzati */
+.alignfull{width: 100vw;margin-left: calc(50% - 50vw);}
+.alignwide{width: 90vw;margin-left: calc(50% - 45vw);}
