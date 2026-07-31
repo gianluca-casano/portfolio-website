@@ -1,4 +1,4 @@
-# Personal Portfolio - [Visualizza il sito live (disponibile prossimamente)](https://gianlucacasano.it/)
+# Personal Portfolio - [Visualizza il sito live](https://gianlucacasano.it/)
 
 Benvenuto nella repository del mio sito web portfolio personale. Questo spazio digitale è stato progettato e sviluppato con l'obiettivo di presentarmi in modo professionale a realtà aziendali come **Junior Web Designer & Front-end Developer**, mostrando le mie competenze, la qualità del mio codice e i miei progetti pratici.
 
@@ -50,6 +50,7 @@ Se sei un recruiter, un lead developer o un'azienda interessata al mio profilo p
 
 * **[Linkedin](https://www.linkedin.com/in/gianlucacasano/)**
 * **[GitHub](https://github.com/gianluca-casano)**
+* **[Sito Web Portfolio](https://gianlucacasano.it/)**
 
 ---
 
