@@ -35,7 +35,22 @@
 
           <div class="col-50 text-center enter-right">
 
-            <img class="hero_section__img" src="<?php echo get_stylesheet_directory_uri(); ?>/custom/img/hero_img.png" alt="Foto in primo piano del web designer Gianluca Casano">
+            <!-- <picture> : fa da contenitore wrapper e serve a raggruppare diverse sorgenti per un'immagine,
+              lasciando decidere al browser quale scaricare in base alle regole definire.
+            -->
+            <picture>
+              <!-- 1. <source> : dice al browser di caricare l'immagine inserita solo per mobile -->
+              <source media="(max-width: 768px)" srcset="<?php echo get_stylesheet_directory_uri(); ?>/custom/img/hero_img-mobile.webp" type="image/webp">
+  
+              <!-- carica l'img per desktop e tablet -->
+              <img class="hero_section__img"
+              src="<?php echo get_stylesheet_directory_uri(); ?>/custom/img/hero_img-desktop.webp"
+              alt="Foto in primo piano del web designer Gianluca Casano"
+              width="569"
+              height="574"
+              fetchpriority="high">
+              <!-- width / height : impostano in anticipo lo spazio necessario per l'img (evita di caricare tutto al momento) -->  
+            </picture>
             
             <img class="available rotate" src="<?php echo get_stylesheet_directory_uri(); ?>/custom/img/available.svg" alt="Available for work">
 
