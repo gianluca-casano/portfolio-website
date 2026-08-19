@@ -39,7 +39,7 @@
               lasciando decidere al browser quale scaricare in base alle regole definire.
             -->
             <picture>
-              <!-- 1. <source> : dice al browser di caricare l'immagine inserita solo per mobile -->
+              <!-- <source> : dice al browser di caricare l'immagine inserita solo per mobile -->
               <source media="(max-width: 768px)" srcset="<?php echo get_stylesheet_directory_uri(); ?>/custom/img/hero_img-mobile.webp" type="image/webp">
   
               <!-- carica l'img per desktop e tablet -->
