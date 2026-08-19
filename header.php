@@ -10,6 +10,7 @@
 
   <link rel="icon" href="<?php echo get_stylesheet_directory_uri(); ?>/custom/img/favicon.svg" type="image/svg">
   <link rel="preload" as="image" href="<?php echo get_stylesheet_directory_uri(); ?>/custom/img/hero_img-mobile.webp" type="image/webp" media="(max-width: 768px)" fetchpriority="high">
+  <link rel="preload" as="image" href="<?php echo get_stylesheet_directory_uri(); ?>/custom/img/hero_img-desktop.webp" type="image/webp" media="(min-width: 769px)" fetchpriority="high">
 
   <?php wp_head(); // insert all the styles of WordPress ?>
 
