@@ -42,7 +42,7 @@
 
       <div class="container-icon">
 
-        <a href="mailto:webdesign.casano@gmail.com" target="_blank">
+        <a href="/#contattami">
           <img class="email-icon" src="<?php echo get_stylesheet_directory_uri(); ?>/icons/gmail.svg" alt="">
         </a>
 
